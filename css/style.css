@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Playwrite+GB+J:ital,wght@0,100..400;1,100..400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color_0: #ff7a2a;
+    --color_1:#b59a90;
+    --color_2: #4a6ed1;
+    --color_4: #0b1020;
+    --color_5: #d1c7c4;
+    --color_6: #192344; 
+}
+
+main{
+    margin: 100px 0px;
+}
+
+body{
+    background-color: var(--color_4);
+}
+
+section{
+    margin: 0px 50px;
+}
+
+h1{
+    text-align: center;
+    font-family: "Google Sans", sans-serif;
+    font-size: 35px;
+    font-weight: 800;
+    color: var(--color_1);
+}
+
+h2, h3, h4, h5 ,h6 {
+    font-family: "PT Sans", sans-serif;
+    color: var(--color_4);
+    margin-top: 20px;
+    text-align: end;
+}
+
+label{
+    color: var(--color_4);
+    margin: 10px;
+    text-align: start;
+}
+
+a{
+    margin:0px 30px;
+}
+
+p{
+    color:var(--color_1);
+    margin: 50px;
+}
+
+footer p {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.body-beige{
+    background-color: var(--color_1);
+}
+
+.btn-primary{
+    background: linear-gradient(to left,#4a6ed1 , #0b1020 );
+    border: none;
+}
+
+.form-control{
+    background-color: rgba(255, 255, 255, 0.097);
+    border: none;
+}
+
+.btn-primary:hover{
+    transform: scale(1.015);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.29);
+    border: none;
+}
+
+#navbarNavAltMarkup{
+    justify-content: end;
+    
+}
+
+.color-nav{
+    color: var(--color_0);
+    text-decoration: none;
+}
+
+.color-nav:hover{
+    color: var(--color_0);
+    text-decoration: none;
+    background-color: var(--color_4);
+}
+
+.div-beige{
+    background-color: #d1c7c4;
+}
+
+/*------------------  index  ------------------ */
+
+/*color selección navbar*/
+.navbar-nav .nav-link:hover {
+    color: var(--color_1);
+    border-bottom: 3px solid #b59a90 !important; /* Línea más suave al pasar el mouse */
+    transition: border-color 0.2s ease-in-out; /* Animación de transición fluida */
+}
+
+.body-index{
+    background-image: url('/Proyecto\ Alke\ Wallet/img/body-index.png');
+    background-repeat: no-repeat;
+    background-size: cover; /*cubre toda la pantalla*/
+    background-position: center;/*mantiene la imagen en el centro*/
+    background-attachment: fixed; /*mantiene fondo estatico (scroll)*/
+}
+
+#infoIndex{
+    margin: 15%;
+    justify-content: center;
+}
+
+div h1{
+    color: var(--color_0);
+    display: flex;
+    justify-content: start;
+}
+
+div p{
+    margin-top: 30px;
+}
+
+/*--------------------  Login  ----------------*/
+header{
+    margin: 30px;
+}
+
+.div-login{
+    background-color: var(--color_1);
+    padding: 40px;
+    border-radius: 12px;
+}
+
+main .form h2 {
+    text-align: center;
+}
+
+main div button {
+    width: 100%;
+}
+
+.main-login{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registrate{
+    display: flex;
+    justify-content: center;
+    color: var(--color_4);
+    margin: 20px 0px 0px;
+}
+
+/*----------------  menu  -----------------*/
+
+.colorDashboard{
+    display: flex;
+    justify-content: center;
+    background-color: var(--color_6);
+    padding: 30px;
+    border-radius: 12px;
+    margin: 10px;
+    color: var(--color_1);
+
+}
+
+.h1-menu{
+    color: var(--color_1);
+    text-align: start;
+}
+
+.card{
+    background-color: var(--color_6);
+    color: var(--color_1);
+    width: auto;
+}
+
+.btn-claro{
+    background-color: var(--color_1);
+    color: var(--color_4);
+    margin: 5px 0px;
+}
+
+.btn-claro:hover{
+    background-color: var(--color_0);
+    color: var(--color_4);
+    margin: 5px;
+}
+
+.drop-nav{
+    background-color: var(--color_4);
+    color: var(--color_0);
+}
+
+.drop-nav:hover{
+    background-color: var(--color_4);
+    color: var(--color_0);
+    color: var(--color_1);
+}
+
+table .table-striped .table-hover {
+    width: 100%;
+}
+
+/*------------  transaction -------------------*/
+
+.table-hover{
+    --bs-table-color:var(--color_4);          /* Color del texto */
+    --bs-table-bg: var(--color_1);             /* Fondo principal de la tabla */
+    --bs-table-striped-color: var(--color_4);  /* Color del texto */
+    --bs-table-striped-bg: var(--color_5);     /* Fondo de filas alternas (table-striped) */
+    --bs-table-hover-bg: var(--color_0);       /* Fondo al pasar el cursor (table-hover) */
+    
+}
+
+
+/*------------ sendmoney -------------------*/
+
+.div-transferencia{
+    background-color: var(--color_1);
+}
+
+.modal-color{
+    background-color: var(--color_6);
+}
+
+.modal-body form{
+    color: var(--color_1);
+}
+
+
+/*------------ deposit -------------------*/
+
+.form-claro label{
+    color: var(--color_1);
+}
+
+
+/*------------------------------------------------*/
+@media (min-width: 992px) and (max-width: 1080px) {
+    a{
+        margin: 5px;
+    }
+}

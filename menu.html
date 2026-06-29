@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Alke Wallet</title>
+
+        <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!--Estilos-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-transparent">
+            <div class="container-fluid">
+                <a class="color-nav navbar-brand" href="">Alke Wallet</a>
+                <div class="navbar-nav drop-nav">
+                    <a class="nav-link dropdown-toggle drop-nav" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-user"></i>
+                        <span id="nombreUsuario"></span>
+                    </a>
+                    <ul class="dropdown-menu drop-nav">
+                        <li>
+                            <a id="logout" class="dropdown-item drop-nav" href="index.html">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                Cerrar Sesión
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h1 class="card-title">Saldo disponible</h1>
+                            <hr>
+                            <p id="saldo" class="card-text">
+                                <i class="fa-solid fa-wallet"></i>
+                                </p>
+                        </div>
+                        <a href="sendmoney.html" class="btn btn-claro">Enviar Dinero</a>
+                        <a href="deposit.html" class="btn btn-claro">Depositar</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h1 class="card-title">Últimos Movimientos</h1>
+                            <a href="transaction.html" class="btn btn-claro">Ver más</a>
+                            <hr>
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Fecha/Hora</th>
+                                        <th scope="col">Destino</th>
+                                        <th scope="col">Monto</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ultimosMovimientos">
+                                 <!---Tabla se rellena con función mostrarTransferencias-->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>2026 Alke Wallet</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        sesionSegura();
+        usuarioLogueado();
+        saldoDisponible();
+        ultimasTransacciones();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

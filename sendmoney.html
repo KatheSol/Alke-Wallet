@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envío dinero | Alke Wallet</title>
+
+        <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!--Estilos-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-transparent">
+            <div class="container-fluid">
+                <a class="color-nav navbar-brand" href="#">Envío de Dinero</a>
+                <button class="color-nav navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="color-nav">
+                    <i class="fa-solid fa-bars"></i>
+                </span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="color-nav nav-link" href="transaction.html">Transacciones</a>
+                        <a class="color-nav nav-link" href="deposit.html">Depositar</a>
+                        <a class="color-nav nav-link" href="menu.html">
+                            <i class="fa-solid fa-outdent"></i>
+                            Volver al menú principal
+                        </a>
+                        <a class="color-nav nav-link" href="index.html">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            Cerrar Sesión
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title">Transferencia</h1>
+                    <hr>
+                    <form id="formTransferencia"  class="form-claro">
+                        <div id="mensaje"></div>
+                        <label for="destinatario" class="form-label">Seleccione al destinatario</label>
+                        <select id="selectDestinatario" class="form-select">
+                            <option id="usuariosOptions" selected>Seleccionar</option>
+                            <!--Se rellena con la función listarDestinatarios()-->
+                        </select>
+                        <!-- Button  modal -->
+                        <button type="button" class="btn btn-claro" data-bs-toggle="modal" data-bs-target="#modalNuevoDestinatario">
+                        Agregar nuevo destinatario
+                        </button>
+                        <label for="montotransferencia" class="form-label">Monto a transferir</label>
+                        <input type="text" class="form-control" id="montoTransferencia">
+                        <button type="submit" class="btn btn-claro mt-3" >Transferir</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>2026 Alke Wallet</p>
+    </footer>
+
+    <!--MODAL AGREGAR DESTINATARIO -->
+    <div class="modal fade" id="modalNuevoDestinatario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content modal-color">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo Destinatario</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formNuevoDestinatario" class="form-claro">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre Completo</label>
+                            <input type="text" class="form-control" name="nombre" id="nombre">
+                        </div>
+                            <div class="mb-3">
+                            <label for="rut" class="form-label">RUT</label>
+                            <input type="text" class="form-control" name="rut" id="rut">
+                        </div>
+                            <div class="mb-3">
+                            <label for="banco" class="form-label">Banco</label>
+                            <input type="text" class="form-control" name="banco" id="banco">
+                        </div>
+                        <div class="mb-3">
+                            <label for="Cuenta" class="form-label">N° Cuenta</label>
+                            <input type="text" class="form-control" name="numeroCuenta" id="numeroCuenta">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-claro" onclick="agregarDestinatario()">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        listarDestinatarios();
+        sesionSegura();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
