@@ -112,7 +112,7 @@ footer p {
 }
 
 .body-index{
-    background-image: url('/Proyecto\ Alke\ Wallet/img/body-index.png');
+    background-image: url('img/body-index.png');
     background-repeat: no-repeat;
     background-size: cover; /*cubre toda la pantalla*/
     background-position: center;/*mantiene la imagen en el centro*/
